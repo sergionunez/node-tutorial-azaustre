@@ -15,7 +15,7 @@ api.put('/product/:productId', ProductCtrl.updateProduct);
 
 api.delete('/product/:productId', ProductCtrl.deleteProduct);
 
-api.get('/privado', auth.isAuth, (req, res) => {
+api.get('/privado', auth, (req, res) => {
     res.status(200).send({ message: 'Tienes acceso' });
 });
 
